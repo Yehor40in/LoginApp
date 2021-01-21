@@ -32,9 +32,8 @@ class LoggedViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
-        Auth.user = nil
+        Auth.shared.deauthenticate()
         performSegue(withIdentifier: "LogoutSegue", sender: self)
-        UserDefaults.standard.removeObject(forKey: Config.tokenKey)
     }
     
 }
