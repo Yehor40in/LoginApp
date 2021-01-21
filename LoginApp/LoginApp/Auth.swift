@@ -68,12 +68,6 @@ final class Auth {
         }
     }
     
-    
-    func logout() -> Bool {
-        Auth.user = nil
-        return Auth.isAuthenticated
-    }
-    
 }
 
 
