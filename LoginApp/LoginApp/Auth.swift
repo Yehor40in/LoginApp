@@ -68,6 +68,11 @@ final class Auth {
         }
     }
     
+    func deauthenticate() -> Void {
+        Auth.user = nil
+        UserDefaults.standard.removeObject(forKey: Config.tokenKey)
+    }
+    
 }
 
 
